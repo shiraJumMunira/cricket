@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.field{
+    position: relative;
+    margin: 160px;
+}
+@keyframes anim{
+    0%{
+        top:-60px;
+        left: 384px;
+    }
+    25%{
+        top: 0px;
+        left:190px;
+    }
+    75%{
+        top: -60px;
+        left: 84px;
+    }
+    100%{
+        top: -200px;
+        left: 600px;
+    }
+}
+.bat{
+    width: 25px;
+    height: 80px;
+    border-radius: 5px 2px;
+    background-color: burlywood;
+    box-shadow: 2px 2px 2px #ccc, -2px -2px -2px #888;
+    position: relative;
+    transition: transform 1s ease-in-out 1.4s;
+}
+.field:hover .bat{
+    transform: rotate(-60deg);
+    transform-origin: 100% 0%;
+}
+#idd{
+    position: relative;
+    width: 7px;
+    height: 45px;
+    background-color: crimson;
+    border-radius: 20px;
+    top:-30px;
+    left: 9px;
+}
+.ball{
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-image: linear-gradient(blue, rgb(14, 180, 36));
+    position: relative;
+    top: :-60px;
+    left: 384px;
+}
+.field:hover .ball {
+    animation: anim 3s linear 1 normal;
+   animation-fill-mode: forwards;
+}
